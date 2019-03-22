@@ -70,12 +70,12 @@ alertmanager:
   ingress:
     ## If true, alertmanager Ingress will be created
     ##
-    enabled: false
+    enabled: true
 
     ## alertmanager Ingress annotations
     ##
-    annotations: {}
-    #   kubernetes.io/ingress.class: nginx
+    annotations:
+        kubernetes.io/ingress.class: nginx
     #   kubernetes.io/tls-acme: 'true'
 
     ## alertmanager Ingress additional labels
@@ -85,8 +85,8 @@ alertmanager:
     ## alertmanager Ingress hostnames with optional path
     ## Must be provided if Ingress is enabled
     ##
-    hosts: []
-    #   - alertmanager.domain.com
+    hosts:
+        - alertmanager.bilenkis.ru
     #   - domain.com/alertmanager
 
     ## alertmanager Ingress TLS configuration
@@ -553,12 +553,12 @@ server:
   ingress:
     ## If true, Prometheus server Ingress will be created
     ##
-    enabled: false
+    enabled: true
 
     ## Prometheus server Ingress annotations
     ##
-    annotations: {}
-    #   kubernetes.io/ingress.class: nginx
+    annotations:
+        kubernetes.io/ingress.class: nginx
     #   kubernetes.io/tls-acme: 'true'
 
     ## Prometheus server Ingress additional labels
@@ -568,8 +568,8 @@ server:
     ## Prometheus server Ingress hostnames with optional path
     ## Must be provided if Ingress is enabled
     ##
-    hosts: []
-    #   - prometheus.domain.com
+    hosts:
+        - prometheus.bilenkis.ru
     #   - domain.com/prometheus
 
     ## Prometheus server Ingress TLS configuration
